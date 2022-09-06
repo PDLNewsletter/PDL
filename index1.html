@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+
+    <!-- CSS Reset : BEGIN -->
+<style>
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+body {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    background: #f5f3ea;
+}
+
+/* What it does: Stops email clients resizing small text. */
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* What it does: Centers email on Android 4.4 */
+div[style*="margin: 16px 0"] {
+    margin: 0 !important;
+}
+
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table,
+td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+}
+
+/* What it does: Fixes webkit padding issue. */
+table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    margin: 0 auto !important;
+}
+
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+    -ms-interpolation-mode:bicubic;
+}
+
+/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+p  {
+padding: 0;
+line-height: 1.2em;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+/* What it does: A work-around for email clients meddling in triggered links. */
+*[x-apple-data-detectors],  /* iOS */
+.unstyle-auto-detected-links *,
+.aBn {
+    border-bottom: 0 !important;
+    cursor: default !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+
+/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+.a6S {
+    display: none !important;
+    opacity: 0.01 !important;
+}
+
+/* What it does: Prevents Gmail from changing the text color in conversation threads. */
+.im {
+    color: inherit !important;
+}
+
+/* If the above doesn't work, add a .g-img class to any image in question. */
+img.g-img + div {
+    display: none !important;
+}
+
+/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+/* Create one of these media queries for each additional viewport size you'd like to fix */
+
+/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    u ~ div .email-container {
+        min-width: 320px !important;
+    }
+}
+/* iPhone 6, 6S, 7, 8, and X */
+@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    u ~ div .email-container {
+        min-width: 375px !important;
+    }
+}
+/* iPhone 6+, 7+, and 8+ */
+@media only screen and (min-device-width: 414px) {
+    u ~ div .email-container {
+        min-width: 414px !important;
+    }
+}
+    </style>
+
+    <!-- CSS Reset : END -->
+
+    
+    <!-- Progressive Enhancements : BEGIN -->
+    <style>
+
+	    .primary{
+	background: #ffffff;
+}
+.bg_white{
+	background: #f5f3ea;
+}
+.bg_light{
+	background: #fafafa;
+}
+.bg_black{
+	background: #000000;
+}
+.bg_dark{
+	background: rgba(0,0,0,.8);
+}
+.email-section{
+	padding:1.5em;
+}
+
+/*BUTTON*/
+.btn{
+	padding: 15px 20px;
+	display: inline-block;
+}
+.btn.btn-primary{
+	border-radius: 5px;
+	background: #c94848;
+	color: #ffffff;
+}
+.btn.btn-primaryv{
+	border-radius: 5px;
+	background: #16668e;
+	color: #ffffff;
+}
+.btn.btn-white{
+	border-radius: 5px;
+	background: #ffffff;
+	color: #000000;
+}
+.btn.btn-white-outline{
+	border-radius: 5px;
+	background: transparent;
+	border: 1px solid #fff;
+	color: #fff;
+}
+.btn.btn-black{
+	border-radius: 0px;
+	background: #000;
+	color: #fff;
+}
+.btn.btn-black-outline{
+	border-radius: 0px;
+	background: transparent;
+	border: 2px solid #000;
+	color: #000;
+	font-weight: 700;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Playfair Display', sans-serif;
+	color: #000000;
+	margin-top: 0;
+	font-weight: 400;
+	padding: 0;
+	line-height: 1.2em;
+}
+
+body{
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 1.8;
+	color: rgba(0,0,0,.5);
+}
+
+a{
+	color: #16668e;
+}
+
+table{
+}
+/*LOGO*/
+
+.logo h1{
+	align-content: center;;;
+}
+.logo h1 a{
+	color: #000000;
+	font-size: 30px;
+	font-weight: 700;
+	/*text-transform: uppercase;*/
+	font-family: 'Playfair Display', sans-serif;
+}
+
+.navigation{
+	padding: 0;
+	padding: 1em 0;
+	/*background: rgba(0,0,0,1);*/
+	border-top: 1px solid rgba(0,0,0,.05);
+	border-bottom: 1px solid rgba(0,0,0,.05);
+	margin-bottom: 0;
+}
+.navigation li{
+	list-style: none;
+	display: inline-block;;
+	margin-left: 5px;
+	margin-right: 5px;
+	font-size: 13px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.navigation li a{
+	color: rgba(0,0,0,1);
+}
+
+/*HERO*/
+.hero{
+	position: relative;
+	z-index: 0;
+}
+.hero .overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+	width: 100%;
+	background: #000000;
+	z-index: -1;
+	opacity: .2;
+}
+.hero .text{
+	color: rgba(255,255,255,.9);
+	max-width: 50%;
+	margin: 0 auto 0;
+}
+.hero .text h2{
+	color: #fff;
+	font-size: 34px;
+	margin-bottom: 0;
+	font-weight: 700;
+	line-height: 1.4;
+}
+.hero .text h2 span{
+	font-weight: 600;
+	color: #feb062;
+}
+
+/*INTRO*/
+.intro{
+	position: relative;
+	z-index: 0;
+}
+
+.intro .text{
+	color: rgba(0,0,0,.3);
+}
+.intro .text h2{
+	color: #000;
+	font-size: 34px;
+	margin-bottom: 0;
+	font-weight: 300;
+}
+.intro .text h2 span{
+	font-weight: 600;
+	color: #feb062;
+}
+
+/*SERVICES*/
+.services{
+}
+.text-services{
+	padding: 10px 10px 0; 
+	text-align: center;
+}
+.text-services h3{
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.services-list{
+	margin: 0 0 20px 0;
+	width: 100%;
+}
+
+.services-list img{
+	float: left;
+}
+.services-list h3{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.services-list p{
+	margin: 0;
+}
+
+/*PROPETIES*/
+.properties{
+}
+.text-properties{
+	padding: 10px 0; 
+	text-align: center;
+	border: 1px solid rgba(0,0,0,.08);
+	border-top: none;
+}
+.text-properties h3{
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+.text-properties .meta{
+	margin-top: 0;
+}
+.text-properties .price{
+	color: #000;
+	font-size: 18px;
+}
+/*COUNTER*/
+.counter{
+	width: 100%;
+	position: relative;
+	z-index: 0;
+}
+.counter .overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+	width: 100%;
+	background: #000000;
+	z-index: -1;
+	opacity: .3;
+}
+.counter-text{
+	text-align: center;
+}
+.counter-text .num{
+	display: block;
+	color: #ffffff;
+	font-size: 34px;
+	font-weight: 700;
+}
+.counter-text .name{
+	display: block;
+	color: rgba(255,255,255,.9);
+	font-size: 13px;
+}
+
+
+/*HEADING SECTION*/
+.heading-section{
+}
+.heading-section h2{
+	color: #000000;
+	font-size: 28px;
+	margin-top: 0;
+	line-height: 1.4;
+	font-weight: 400;
+}
+.heading-section .subheading{
+	margin-bottom: 20px !important;
+	display: inline-block;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: rgba(0,0,0,.4);
+	position: relative;
+}
+.heading-section .subheading::after{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: #feb062;
+	margin: 0 auto;
+}
+
+.heading-section-white{
+	color: rgba(255,255,255,.8);
+}
+.heading-section-white h2{
+	font-family: 
+	line-height: 1;
+	padding-bottom: 0;
+}
+.heading-section-white h2{
+	color: #ffffff;
+}
+.heading-section-white .subheading{
+	margin-bottom: 0;
+	display: inline-block;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: rgba(255,255,255,.4);
+}
+
+
+ul.social{
+	padding: 0;
+}
+ul.social li{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+/*FOOTER*/
+
+.footer{
+	border-top: 1px solid rgba(0,0,0,.05);
+	color: rgba(0,0,0,.5);
+}
+.footer .heading{
+	color: #000;
+	font-size: 20px;
+}
+.footer ul{
+	margin: 0;
+	padding: 0;
+}
+.footer ul li{
+	list-style: none;
+	margin-bottom: 10px;
+}
+.footer ul li a{
+	color: rgba(0,0,0,1);
+}
+
+
+@media screen and (max-width: 500px) {
+
+
+}
+
+
+    </style>
+
+
+</head>
+
+<body width="100%" style="margin: 0; padding: 0 !important; background-color: #222222;">
+	<center style="width: 100%; background-color: #ffffff;">
+   
+    <div style="max-width: 700px; margin: 0 auto;" class="email-container">
+    	<!-- BEGIN BODY -->
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+      	
+      	
+	      
+				<tr>
+          <td valign="middle" class="intro bg_white" style="padding: 1em 1em 0.5em 1em;">
+            <table>
+            	<tr>
+            		<td>
+            			<div class="text" style="padding: 0; text-align: center;">
+            				<p style= " font-size: 24px; line-spacing: 0; font-family: Myriad Pro; color: #3b4051; text-align: center;"><b>Bleeding Art: <br> The casualty of the conflict </br> </b></p>
+            			</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+	      </tr><!-- end tr -->
+	      <tr>
+          <td valign="middle" class="hero bg_white" style="background-image: url(./images/Bleeding_art.jpg); padding: 0; background-size: cover; height: 700px; ">
+          <div class="overlay"></div>
+          </td>
+	      </tr><!-- end tr -->
+	      <tr>
+          <td valign="middle" class="bg_white" style="padding: 2em 1em 2em 1em;>
+          	<div class="overlay"></div>
+            <table>
+            	<tr>
+            		<td>
+            			<div class="text" style=" font-size: 24px; padding: 0 2.5em; text-align: justify;">
+            			<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In times of war, the destruction of art is equivalent to a crime, to a ruthless slaughter of everything that is symbolic of free speech, thought, and action</p>
+            			<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WARS are destructive, disruptive, and among the many crimes and atrocities inflicted in the vulgar annexation of power, is the ‘cultural atrocity’ that robs civilizations of the very essence of humanity and freedom. It is these ‘cultural atrocities’ being committed in the Russian invasion of Ukraine that the Getty Statement (from The Getty Trust) has condemned strongly.</p>
+            			<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“The massive Russian attack on Ukraine puts at risk, not just human lives and physical infrastructure, but also priceless works of art, cultural artifacts, and monuments. At risk in Ukraine are millions of artworks and monuments, including monuments representing centuries of history from the Byzantine to the Baroque periods, as well as UNESCO World Heritage sites,” it reads. The Trust is distressed over the irreversible damage to art and heritage, especially the Sviatohirsk Cave Monastery in the Donetsk region of eastern Ukraine — the oldest monastery in the country, dating back to 1526 that has been badly damaged by Russian shelling.</p>
+            			<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In times of conflict, the loss of art is equivalent to a perfect war crime, a tragedy of monumental proportions for among the multitude of things it symbolizes, art is fearless. It holds the power to unite, is a key to peace, a vision of the future, and a vast canvas of knowledge. Works of art are invaluable repositories of time, evolution, of history. They are crucial links and references to our culture and tradition. They connect the past, present, and future, and a single act of war burns down centuries of human memory. Take for instance the bombing of the spectacular Buddhas of Bamiyan by the Taliban forces in 2001. In an instant, it wiped off a colourful and lively past of Afghanistan. Bamiyan with its fertile plains amid the harsh terrain had at one time served as the central location along the Silk Route for merchants and missionaries to stop during their travels. It was an important route of trade connecting East and West, and the attack on such places of artistic confluence is also taken as a strategic, political, and even a tyrannical undertaking.</p>
+            			<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The sole purpose of war is to deploy violence to force opponents to submit and surrender. These acts of coercion aim at amputating all that questions their existence, the wartime ideologies and practices, and the effects that are felt for generations. The attempt of the attacker is to change the narrative, to erase the memory of a people, of their land, culture, and traditions, their stories and struggles. On the other hand, from these very wars, chaos and conflicts, arises an art that’s defiant, a tribute, an ode to the catastrophe it has survived.</p>
+            			<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Important sites that have been recently destroyed as a wartime strategy include the Grand al-Nuri Mosque and the Baalshamin and Bel temples in Palmyra, Syria.
+Located in Syria, the temple was constructed in honour of the Mesopotamian god Bel. One of the best-preserved structures, it was destroyed by ISIS in August 2015.  The works of art destroyed in the September 11 attacks on the World Trade Center could be worth as much as $100m (£68m), according to the art insurance specialists AXA Art. Once dubbed the 8th Wonder of the World, Yantarnaya Komnata or the Amber Room was an ornate chamber located in Russia’s Catherine Palace. It was looted during the Nazi invasion of the former USSR.</p>
+            			<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Looted art has also been used to finance wars. According to reports, Russia has estimated that ISIS nets between $150-200 million per year in the illegal antiquities trade. Stolen art is also used to reward military and political leaders.</p>
+            			<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The damaging aftermath of the books and art burnt and destroyed during Hitler’s regime is still being felt. Closer home, the tremors of 1984 in Punjab, the continuous disasters, and the military presence in Kashmir have eroded the art, heritage, and culture of the state. A shrine built in 1438 in Budgam, around the grave of Sufi poet, Sheikh Noor Din was set ablaze in 1995 when militants allegedly used this shrine as a hideout – one of the many cultural centres that have come in the crossfire.</p>
+            			<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All this senseless erasure makes one wonder why art? Why bomb it, and destroy the centres of culture and heritage that impose no threat? The contempt, note scholars, stems from power because a reigning culture too expresses a type of power, hence the attempt to break the hold.  The destruction in Mosul, Iraq, wrote Iraqi Haifa Zangana in The Guardian, was sought to "erase memory." She sees the culprits here as "war criminals." Art is an expression of diversity, and diversity is sickening to dictators. Their imposition then comes through destruction, appropriation, or banishment. Appropriation and theft of art are ways of imposing on culture, leaving people without any cultural references, banishing them from their own homeland, and breaking down their national spirit.</p>
+            			<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Since December 2014, several of Iraq’s cultural buildings, including the main library, have been ransacked, and treasures stolen or destroyed by ISIS. Close to 8,000 books and manuscripts have reportedly been burned, including some dated more than 5,000 years old. Hitler deemed paintings by Picasso, Matisse, and Maurice Vlaminck, as ‘degenerate’ and destroyed most in 1933. The Soviet Union banned Expressionist painting after taking power, instead of promoting Realism, seen as 'fit' for the workers. It was an appropriation of art and creativity, of a part of the human mind. In the 19th century, Great Britain destroyed a part of Benin's heritage, while sending numerous artifacts to be auctioned or placed in its museums.</p>
+            			<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Art is used as a weapon of mass communication, and in its effort to muzzle the people and country, warmongers attack the free fronts of art and artists by vandalizing and bombing museums, heritage centres, cultural addas, studios, and stations of artists, cutting out all the life support.</p>
+            			<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Today, in this hyper-digitalized climate change afflicted world, heritage is slowly vanishing from our existence. Its gatekeepers and protectors, its votaries and warriors are far and few in-between, and we need to preserve, and conserve whatever is left of the time gone.</p>
+            			<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Instead of destroying our common heritage, we should be celebrating its existence, working to enhance protections and strengthen our international laws,” the Getty Trust works to call attention to the loss of cultural heritage worldwide.</p>	
+						<p style= " font-family: Georgia; color: #3b4051;"><a href="./index.html" class="btn btn-primary color: blue;">Read Less</a></p>
+
+        			</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+          
+          	    
+    </div>
+  </center>
+</body>
+</html>

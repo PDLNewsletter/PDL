@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+
+    <!-- CSS Reset : BEGIN -->
+<style>
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+body {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    background: #f5f3ea;
+}
+
+/* What it does: Stops email clients resizing small text. */
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* What it does: Centers email on Android 4.4 */
+div[style*="margin: 16px 0"] {
+    margin: 0 !important;
+}
+
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table,
+td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+}
+
+/* What it does: Fixes webkit padding issue. */
+table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    margin: 0 auto !important;
+}
+
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+    -ms-interpolation-mode:bicubic;
+}
+
+/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+p  {
+padding: 0;
+line-height: 1.2em;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* What it does: A work-around for email clients meddling in triggered links. */
+*[x-apple-data-detectors],  /* iOS */
+.unstyle-auto-detected-links *,
+.aBn {
+    border-bottom: 0 !important;
+    cursor: default !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+
+/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+.a6S {
+    display: none !important;
+    opacity: 0.01 !important;
+}
+
+/* What it does: Prevents Gmail from changing the text color in conversation threads. */
+.im {
+    color: inherit !important;
+}
+
+/* If the above doesn't work, add a .g-img class to any image in question. */
+img.g-img + div {
+    display: none !important;
+}
+
+/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+/* Create one of these media queries for each additional viewport size you'd like to fix */
+
+/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    u ~ div .email-container {
+        min-width: 320px !important;
+    }
+}
+/* iPhone 6, 6S, 7, 8, and X */
+@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    u ~ div .email-container {
+        min-width: 375px !important;
+    }
+}
+/* iPhone 6+, 7+, and 8+ */
+@media only screen and (min-device-width: 414px) {
+    u ~ div .email-container {
+        min-width: 414px !important;
+    }
+}
+    </style>
+
+    <!-- CSS Reset : END -->
+
+    
+    <!-- Progressive Enhancements : BEGIN -->
+    <style>
+
+	    .primary{
+	background: #ffffff;
+}
+.bg_white{
+	background: #f5f3ea;
+}
+.bg_light{
+	background: #fafafa;
+}
+.bg_black{
+	background: #000000;
+}
+.bg_dark{
+	background: rgba(0,0,0,.8);
+}
+.email-section{
+	padding:1.5em;
+}
+
+/*BUTTON*/
+.btn{
+	padding: 15px 20px;
+	display: inline-block;
+}
+.btn.btn-primary{
+	border-radius: 5px;
+	background: #c94848;
+	color: #ffffff;
+}
+.btn.btn-primaryv{
+	border-radius: 5px;
+	background: #16668e;
+	color: #ffffff;
+}
+.btn.btn-white{
+	border-radius: 5px;
+	background: #ffffff;
+	color: #000000;
+}
+.btn.btn-white-outline{
+	border-radius: 5px;
+	background: transparent;
+	border: 1px solid #fff;
+	color: #fff;
+}
+.btn.btn-black{
+	border-radius: 0px;
+	background: #000;
+	color: #fff;
+}
+.btn.btn-black-outline{
+	border-radius: 0px;
+	background: transparent;
+	border: 2px solid #000;
+	color: #000;
+	font-weight: 700;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Playfair Display', sans-serif;
+	color: #000000;
+	margin-top: 0;
+	font-weight: 400;
+	padding: 0;
+	line-height: 1.2em;
+}
+
+body{
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 1.8;
+	color: rgba(0,0,0,.5);
+}
+
+a{
+	color: #16668e;
+}
+
+table{
+}
+/*LOGO*/
+
+.logo h1{
+	align-content: center;;;
+}
+.logo h1 a{
+	color: #000000;
+	font-size: 30px;
+	font-weight: 700;
+	/*text-transform: uppercase;*/
+	font-family: 'Playfair Display', sans-serif;
+}
+
+.navigation{
+	padding: 0;
+	padding: 1em 0;
+	/*background: rgba(0,0,0,1);*/
+	border-top: 1px solid rgba(0,0,0,.05);
+	border-bottom: 1px solid rgba(0,0,0,.05);
+	margin-bottom: 0;
+}
+.navigation li{
+	list-style: none;
+	display: inline-block;;
+	margin-left: 5px;
+	margin-right: 5px;
+	font-size: 13px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.navigation li a{
+	color: rgba(0,0,0,1);
+}
+
+/*HERO*/
+.hero{
+	position: relative;
+	z-index: 0;
+}
+.hero .overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+	width: 100%;
+	background: #000000;
+	z-index: -1;
+	opacity: .2;
+}
+.hero .text{
+	color: rgba(255,255,255,.9);
+	max-width: 50%;
+	margin: 0 auto 0;
+}
+.hero .text h2{
+	color: #fff;
+	font-size: 34px;
+	margin-bottom: 0;
+	font-weight: 700;
+	line-height: 1.4;
+}
+.hero .text h2 span{
+	font-weight: 600;
+	color: #feb062;
+}
+
+/*INTRO*/
+.intro{
+	position: relative;
+	z-index: 0;
+}
+
+.intro .text{
+	color: rgba(0,0,0,.3);
+}
+.intro .text h2{
+	color: #000;
+	font-size: 34px;
+	margin-bottom: 0;
+	font-weight: 300;
+}
+.intro .text h2 span{
+	font-weight: 600;
+	color: #feb062;
+}
+
+/*SERVICES*/
+.services{
+}
+.text-services{
+	padding: 10px 10px 0; 
+	text-align: center;
+}
+.text-services h3{
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.services-list{
+	margin: 0 0 20px 0;
+	width: 100%;
+}
+
+.services-list img{
+	float: left;
+}
+.services-list h3{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.services-list p{
+	margin: 0;
+}
+
+/*PROPETIES*/
+.properties{
+}
+.text-properties{
+	padding: 10px 0; 
+	text-align: center;
+	border: 1px solid rgba(0,0,0,.08);
+	border-top: none;
+}
+.text-properties h3{
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+.text-properties .meta{
+	margin-top: 0;
+}
+.text-properties .price{
+	color: #000;
+	font-size: 18px;
+}
+/*COUNTER*/
+.counter{
+	width: 100%;
+	position: relative;
+	z-index: 0;
+}
+.counter .overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+	width: 100%;
+	background: #000000;
+	z-index: -1;
+	opacity: .3;
+}
+.counter-text{
+	text-align: center;
+}
+.counter-text .num{
+	display: block;
+	color: #ffffff;
+	font-size: 34px;
+	font-weight: 700;
+}
+.counter-text .name{
+	display: block;
+	color: rgba(255,255,255,.9);
+	font-size: 13px;
+}
+
+
+/*HEADING SECTION*/
+.heading-section{
+}
+.heading-section h2{
+	color: #000000;
+	font-size: 28px;
+	margin-top: 0;
+	line-height: 1.4;
+	font-weight: 400;
+}
+.heading-section .subheading{
+	margin-bottom: 20px !important;
+	display: inline-block;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: rgba(0,0,0,.4);
+	position: relative;
+}
+.heading-section .subheading::after{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: #feb062;
+	margin: 0 auto;
+}
+
+.heading-section-white{
+	color: rgba(255,255,255,.8);
+}
+.heading-section-white h2{
+	font-family: 
+	line-height: 1;
+	padding-bottom: 0;
+}
+.heading-section-white h2{
+	color: #ffffff;
+}
+.heading-section-white .subheading{
+	margin-bottom: 0;
+	display: inline-block;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: rgba(255,255,255,.4);
+}
+
+
+ul.social{
+	padding: 0;
+}
+ul.social li{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+/*FOOTER*/
+
+.footer{
+	border-top: 1px solid rgba(0,0,0,.05);
+	color: rgba(0,0,0,.5);
+}
+.footer .heading{
+	color: #000;
+	font-size: 20px;
+}
+.footer ul{
+	margin: 0;
+	padding: 0;
+}
+.footer ul li{
+	list-style: none;
+	margin-bottom: 10px;
+}
+.footer ul li a{
+	color: rgba(0,0,0,1);
+}
+
+
+@media screen and (max-width: 500px) {
+
+
+}
+
+
+    </style>
+
+
+</head>
+
+<body width="100%" style="margin: 0; padding: 0 !important; background-color: #222222;">
+	<center style="width: 100%; background-color: #ffffff;">
+   
+    <div style="max-width: 700px; margin: 0 auto;" class="email-container">
+    	<!-- BEGIN BODY -->
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+      	
+      	<tr>
+          <td valign="middle" class="bg_white" style="padding: 0 2.5em 0 2.5em;>
+          	<div class="overlay"></div>
+            <table>
+            	<tr>
+            		<td>
+            			<div class="text" style=" font-family: Trajan Pro; font-size: 19.32pt; color: #4e525f; padding: 0 0.5em; text-align: center;">
+            				<p style="text-align: centre;">APRIL, MAY, JUNE 2022</p>
+            				        
+            			</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+	      </tr><!-- end tr -->
+      	
+      	
+      	
+      	<tr>
+          <td valign="top" class="bg_white" style="padding: 0;">
+          	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+          		<tr>
+          			<td class="logo" style="text-align: center; padding: 0 8.0em 2.5em 8.0em;">
+			            <div align="center" style="line-height:50px"><a href="http://www.panjabdigilib.org/webuser/searches/mainpage.jsp"><img alt="Alternate text" src="https://drive.google.com/thumbnail?id=1SGhUEp3HLlxgsgbbLGjxfzqiEAcq1VCf" style="display: block; align: center; height: auto; border: 0; width: auto; max-width: 100%;" /> </a></div>
+			            
+			          </td>
+          		</tr>
+          	</table>
+          </td>
+	      </tr><!-- end tr -->
+	      
+	      <tr>
+          <td valign="top" class="bg_white" style="padding: 0;">
+          	<table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+          		<tr>
+			          <td border: none; width="100%" style="text-align: center; background-color: #c94848;">
+			            <ul class="navigation">
+			            	<li style= "font-size: 26.74pt; font-family: Trajan Pro; color: #ffffff;">&nbsp;&nbsp;&nbsp;ਚਿੱਠੀ-ਪੱਤਰ</li>
+			            	<li style= "font-size: 26.74pt; font-family: Trajan Pro; color: #ffffff;">&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+			            	<li style= "font-size: 26.74pt; font-family: Trajan Pro; color: #ffffff;">NEWSLETTER</li>
+			            </ul>
+			          </td>
+          		</tr>
+          	</table>
+          </td>
+	      </tr><!-- end tr -->
+	      
+	    	
+	      <tr>
+          <td valign="top" class="bg_white" style="padding: 0;">
+          	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+          		<tr>
+			          <td width="60%" style="text-align: center; border-collaplse: collaplse;">
+			            <ul class="navigation">
+			            	<li ><a style= " font-size: 24px; font-family: Georgia; color: #32701f;" href="http://www.panjabdigilib.org/webuser/misc/?service=Collections">Collections</a></li>
+			            	<li style= " font-size: 24px; font-family: Georgia; color: #32701f;">|</li>
+			            	<li ><a style= " font-size: 24px; font-family: Georgia; color: #32701f;" href="http://www.panjabdigilib.org/webuser/misc/?service=Volunteer">Volunteer</a></li>
+			            	<li style= "font-size: 24px; font-family: Georgia; color: #32701f;">|</li>
+			            	<li ><a style= " font-size: 24px; font-family: Georgia; color: #32701f;" href="http://www.panjabdigilib.org/webuser/Donate/getpayerinfo.jsp">Donate</a></li>
+			            </ul>
+			          </td>
+          		</tr>
+          	</table>
+          </td>
+	      </tr><!-- end tr -->
+	      
+	      
+	      
+	      <tr>
+          <td valign="middle" class="bg_white" style="padding: 2em 2.5em 1em 2.5em;>
+          	<div class="overlay"></div>
+            <table>
+            	<tr>
+            		<td>
+            			<div class="text" style=" padding: 0 2.5em; ; line-spacing: 0; text-align: justify;">
+            				<p style= " font-size: 24px; font-family: Georgia; color: #3b4051;">Dear Reader</p>
+            				<p style= " font-size: 24px; font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It is human tendency to take things for granted, and we usually take those things for granted which are instrumental in shaping our lives and which help us become what we are. For example, we have failed to appreciate nature and the natural resources that human activities have led to global warming and a drastic change in the climatic cycle on the planet. Nature's wrath has also been witnessed during the last few years in an unprecedented way. </p>
+            				<p style= " font-size: 28px; font-family: Georgia; color: #32701f;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Similarly, we cannot take our past for granted because it is our roots in the past on basis of which our present would shape our future. It is always advisable to learn from history so that the mistakes that we have done in past are not repeated.</p>
+        
+            			</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+	      </tr><!-- end tr -->
+		
+		
+				<tr>
+          <td valign="top" class="bg_white" style="padding: 1em 1em 1em 1em;">
+          	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+          		<tr>
+          			<td class="logo" style="text-align: center;">
+			            <div align="center" style="line-height:auto;"><img alt="Alternate text" src="https://drive.google.com/thumbnail?id=1bVi3o-bVypK-o-3YKBwNyS-iV-nsjX0n" style="display: block; align: center; height: auto; border: 0; width: 400px; max-width: 100%;" /></div>
+			            
+			          </td>
+          		</tr>
+          	</table>
+          </td>
+	      </tr><!-- end tr -->
+	      
+	      
+				<tr>
+          <td valign="middle" class="intro bg_white" style="padding: 1em 1em 0.5em 1em;">
+            <table>
+            	<tr>
+            		<td>
+            			<div class="text" style="padding: 0; text-align: center;">
+            				<p style= " font-size: 24px; line-spacing: 0; font-family: Myriad Pro; color: #3b4051; text-align: center;"><b>Bleeding Art: <br> The casualty of the conflict </br> </b></p>
+            			</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+	      </tr><!-- end tr -->
+	      <tr>
+		  <td valign="middle" class="hero bg_white">  <img alt="Alternate text" src="https://drive.google.com/uc?export=view&id=107og0alQqiOdN7Xcmj1DVfS3HipG2fOp" style =" padding: 0; background-size: cover; height: 710px; witdh: 100%; ">
+		  <div class="overlay"></div>
+          </td>
+	      </tr><!-- end tr -->
+	      <tr>
+          <td valign="middle" class="bg_white" style="padding: 2em 1em 2em 1em;>
+          	<div class="overlay"></div>
+            <table>
+            	<tr>
+            		<td>
+            			<div class="text" style=" font-size: 24px; padding: 0 2.5em; text-align: justify;">
+            				<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In times of war, the destruction of art is equivalent to a crime, to a ruthless slaughter of everything that is symbolic of free speech, thought, and action </p>
+            				<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WARS are destructive, disruptive, and among the many crimes and atrocities inflicted in the vulgar annexation of power, is the 'cultural atrocity' that robs civilizations of the very essence of humanity and freedom. It is these ‘cultural atrocities’ being committed in the Russian invasion of Ukraine that the Getty Statement (from The Getty Trust) has condemned strongly.</p>
+        					<p style= " font-family: Georgia; color: #3b4051;"><a href="./index1.html" class="btn btn-primary color: blue;">Read More</a></p>
+            			</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+          
+          <tr>
+          <td valign="top" class="bg_white" style="padding:  0 1em 0 1em;">
+          	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+          		<tr>
+          			<td class="logo" style="text-align: center;">
+			            <div align="center" style="line-height:auto;"><img alt="Alternate text" src="https://drive.google.com/thumbnail?id=1bVi3o-bVypK-o-3YKBwNyS-iV-nsjX0n" style="display: block; align: center; height: auto; border: 0; width: 400px; max-width: 100%;" /></div>
+			            
+			          </td>
+          		</tr>
+          	</table>
+          </td>
+	      </tr><!-- end tr -->
+
+
+		<tr>
+          <td valign="middle" class="intro bg_white" style="padding: 1em 0 1em 0;">
+            <table>
+            	<tr>
+            		<td>
+            			<div class="text" style="padding: 0 1em 0 1em; text-align: center;">
+            				<p style= " font-size: 24px; font-family: Myriad Pro; color: #3b4051;"><b>Virasat Heritage Centre at <br>Guru Gobind Singh College Chandigarh</br></b></p>
+            			</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+	      </tr><!-- end tr -->
+	      <tr>
+			<td valign="middle" class="hero bg_white" style="background-image: url(https://drive.google.com/uc?export=view&id=1wKVJZCvsKtGkTlBGLU4m_6zQ9cIvoHze); padding: 0; background-size: cover; height: 550px; witdh: 100%;">
+          <div class="overlay"></div>
+          </td>
+	      </tr><!-- end tr -->
+	      <tr>
+          <td valign="middle" class="intro bg_white" style="padding: 2em 1em 2em 1em;>
+          	<div class="overlay"></div>
+            <table>
+            	<tr>
+            		<td>
+            			<div class="text" style=" font-size: 24px; padding: 0 2.5em; text-align: justify;">
+            				<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Sri Guru Gobind Singh College, Chandigarh will house the Virasat Heritage Centre that will define the foresight and mission of the great visionaries who established this prestigious Institution of the region </p>
+            				<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OUR past enriches us, in more ways than we can ever fathom. Our history brings us closer to our present, as we walk towards our future.</p>
+        					<p style= " font-family: Georgia; color: #3b4051;"><a href="./index2.html" class="btn btn-primaryv ">Read More</a></p>
+            			</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+          
+          <tr>
+          <td valign="top" class="bg_white" style="padding: 0 1em 0 1em;">
+          	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+          		<tr>
+          			<td class="logo" style="text-align: center;">
+			            <div align="center" style="line-height:auto;"><img alt="Alternate text" src="https://drive.google.com/thumbnail?id=1bVi3o-bVypK-o-3YKBwNyS-iV-nsjX0n" style="display: block; align: center; height: auto; border: 0; width: 400px; max-width: 100%;" /></div>
+			            
+			          </td>
+          		</tr>
+          	</table>
+          </td>
+	      </tr><!-- end tr -->
+	      
+
+		<tr>
+          <td valign="middle" class="intro bg_white" style="padding: 1em 1em 1em 1em;">
+            <table>
+            	<tr>
+            		<td>
+            			<div class="text" style="padding: 0 2.5em; text-align: center;">
+            				<p style= " font-size: 24px; font-family: Myriad Pro; color: #3b4051;"><b>PDL digitizes records of <br> three departments of HP Govt</br> </b> </p>
+            			</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+	      </tr><!-- end tr -->
+	      <tr>
+			<td valign="middle" class="hero bg_white" style="background-image: url(https://drive.google.com/uc?export=view&id=1h53qE3iIxLokmZr-GS7m9tGzP4QeSujl); padding: 0; background-size: cover; height: 450px; ">
+          <div class="overlay"></div>
+          </td>
+	      </tr><!-- end tr -->
+	      <tr>
+          <td valign="middle" class="intro bg_white" style="padding: 2em 1em 2em 1em;>
+          	<div class="overlay"></div>
+            <table>
+            	<tr>
+            		<td>
+            			<div class="text" style=" font-size: 24px; padding: 0 2.5em; text-align: justify;">
+            				<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Panjab Digital Library's efforts to archive our past continue with a new digitization project in Himachal Pradesh. Commissioned by the HP Government, the PDL has completed te digitization of three important departments, requiring extensive research, work, and commitment. The PDL has completed the digitization of the LIC department, LIC Academy and State Museum, Shimla. Each department has a rich history, with the preservation intended to be an ongoing process. All data from these departments, is now available online on software provided by PDL.</p>
+            				</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+          
+          <tr>
+          <td valign="top" class="bg_white" style="padding: 0 1em 0  1em;">
+          	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+          		<tr>
+          			<td class="logo" style="text-align: center;">
+			            <div align="center" style="line-height:auto;"><img alt="Alternate text" src="https://drive.google.com/thumbnail?id=1bVi3o-bVypK-o-3YKBwNyS-iV-nsjX0n" style="display: block; align: center; height: auto; border: 0; width: 400px; max-width: 100%;" /></div>
+			            
+			          </td>
+          		</tr>
+          	</table>
+          </td>
+	      </tr><!-- end tr -->
+
+
+
+		<tr>
+          <td valign="middle" class="intro bg_white" style="padding: 2em 1em 1em 1em;">
+            <table>
+            	<tr>
+            		<td>
+            			<div class="text" style=" font-size: 24px; padding: 0 ; text-align: center;">
+            				<p style= " font-size: 24px; font-family: Myriad Pro; color: #3b4051;"><b>New beginnings: <br> PDL opens a new outreach centre at Patiala </br> </b></p>
+            			</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+	      </tr><!-- end tr -->
+	      <tr>
+			<td valign="middle" class="hero bg_white" style="background-image: url(https://drive.google.com/uc?export=view&id=1WYLvA8x97ZyoOc-97eqQyb03BT9pe0CY); padding: 0; background-size: cover; height: 400px;">
+          <div class="overlay"></div>
+          </td>
+	      </tr><!-- end tr -->
+	      <tr>
+          <td valign="middle" class="intro bg_white" style="padding: 2em 1em 2em 1em;>
+          	<div class="overlay"></div>
+            <table>
+            	<tr>
+            		<td>
+            			<div class="text" style=" font-size: 24px; padding: 0 2.5em; text-align: justify;">
+            				<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The year 2020 was a year of learning, improvisation, and moving ahead, against all odds. For PDL, the need of the hour was to digitize with greater gusto, preserve and protect our heritage and initiate outreach efforts. In 2020 alone, we digitized 7.5 million pages, the largest number of pages digitized in one year in our 18-year journey. This feat inspired and encouraged us to further gather pace. Our target for the current year is 12 million pages and to achieve our mission, we expanded our site office in Patiala, added more equipment, and selected twenty full-time volunteers. The focus of PDL remains on digitizing single-copy records. With support from the Punjab Government, we aim to digitize over 40 million pages of these records in the next four years. We strive to grow, from strength to strength, with our team our biggest support. </p>
+            				<!--<p style= " font-family: Georgia; color: #3b4051;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The PDL has now opened a new outreach centre at Patial and is devising new strategies to reach out to a larger audience, people from various walks of life, organizations, agencies, and educational institutes for the digitization of documents, projects, books, scripts.</p>
+        					<p style= " font-family: Georgia; color: #3b4051;"><a href="./index3.html" class="btn btn-primary">Read More</a></p> -->
+            			</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+          
+          <tr>
+          <td valign="top" class="bg_white" style="padding: 1em 1em 1em 1em;">
+          	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+          		<tr>
+          			<td class="logo" style="text-align: center;">
+			            <div align="center" style="line-height:auto;"><img alt="Alternate text" src="https://drive.google.com/thumbnail?id=1bVi3o-bVypK-o-3YKBwNyS-iV-nsjX0n" style="display: block; align: center; height: auto; border: 0; width: 400px; max-width: 100%;" /></div>
+			            
+			          </td>
+          		</tr>
+          	</table>
+          </td>
+	      </tr><!-- end tr -->
+
+
+          
+        
+        <tr>
+          <td class="bg_white email-section">
+          	<div class="heading-section" style="text-align: center; padding: 0 30px;">
+            	<h2 style= " font-family: Georgia;">News of the Month</h2>
+            	
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+	      <tr>
+          <td valign="middle" class="hero bg_white" style="padding: 1em 0 1em 0;">
+            <img src="https://drive.google.com/thumbnail?id=1CmrdRVbNzbDEAlVy8DiELU24lZiNNJWX" alt="" style="width: 300px; max-width: 600px; height: auto; margin: auto; display: block;">
+          </td>
+	      </tr><!-- end tr -->
+				<tr>
+          <td valign="top" class="hero bg_white" style="padding: 0 ;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+            	<tr>
+            		<td>
+            			<div class="text" style="text-align: centre; font-size: 18px; padding: 0 2.5em;">
+            				<p style= "  font-family: Georgia; color: #3b4051;">Time Magazine Cover - Vol. L <br> No. 17 Date - October 27,1947</br></p>
+            			</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+	      </tr><!-- end tr -->
+		  <tr>
+          <td class="bg_white email-section">
+          	<div class="heading-section" style="text-align: center; padding: 0 20px;">
+            	<h2 style= " font-family: Georgia;">Advertisement of the Month</h2>
+            
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+	      <tr>
+          <td valign="middle" class="hero bg_white" style="padding: 1em 0 2em 0;">
+            <img src="https://drive.google.com/thumbnail?id=1rya53zvV1XI7RSpOo7y_W320o4PDtvAe" alt="" style="width: 300px; max-width: 600px; height: auto; margin: auto; display: block;">
+          </td>
+	      </tr><!-- end tr -->
+				<tr>
+          <td valign="top" class="hero bg_white" style="padding: 0">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+            	<tr>
+            		<td>
+            			<div class="over" style="text-align: centre; font-size: 18px; padding: 0 2.5em;">
+            				<p style= " font-family: Georgia; color: #3b4051;">The Spokesman weekly <br> Guru Gobind Singh Number, 1986</br></p>
+            			</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+	      </tr><!-- end tr -->
+	     
+	 
+	 <tr>
+          <td valign="top" class="bg_white" style="padding: 1em 1em 1em 1em;">
+          	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+          		<tr>
+          			<td class="logo" style="text-align: center;">
+			            <div align="center" style="line-height:auto;"><img alt="Alternate text" src="https://drive.google.com/thumbnail?id=1bVi3o-bVypK-o-3YKBwNyS-iV-nsjX0n" style="display: block; align: center; height: auto; border: 0; width: 450px; max-width: 100%;" /></div>
+			            
+			          </td>
+          		</tr>
+          	</table>
+          </td>
+	</tr><!-- end tr -->
+	      
+	 <tr>
+          <td valign="middle" class="intro bg_white" style="padding: 2em 0 1em 0;">
+          
+            <table>
+            	<tr>
+            		<td>
+            			<div class="over" style="padding: 0 ; ">
+            				<h2 style= " font-family: Georgia; color: #3b4051; font-size: 18px; text-align: centre;"><b>Adopt a book</b></h2>
+            				<p style= " font-family: Georgia; color: #3b4051; font-size: 18px;">Here is a list of five Books for adoption this month. You may also choose to adopt from the <a href=""> complete list of books</a></h2>
+            			</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+	      </tr><!-- end tr -->
+		
+	    <table style="border: 1px solid black; border-collapse: collapse; font-size: 18px; color: #3b4051; padding: 8em 3em 3em 4em;">
+  			<tr>
+   			 <td style="border: 1px solid black; border-collapse: collapse; padding: 0.5em 0.5em 0.5em 0.5em;"> The Builders of the Khalsa Raj -1944</td>
+    		 <td style="border: 1px solid black; border-collapse: collapse; padding: 0.5em 0.5em 0.5em 0.5em;">Book</td>
+             <td style="border: 1px solid black; border-collapse: collapse; padding: 0.5em 0.5em 0.5em 0.5em;">$ 30</td>
+             <td style="border: 1px solid black; border-collapse: collapse; padding: 0.5em 0.5em 0.5em 0.5em;"><a href="http://www.panjabdigilib.org/webuser/adopt/AdopterDetails.jsp?adodocid=9183&ID=10244&coll=0">Adopt</a></td>
+  			</tr>
+  			<tr>
+   			 <td style="border: 1px solid black; border-collapse: collapse;"> Sources of Punjab History - 1975</td>
+    		 <td style="border: 1px solid black; border-collapse: collapse;">Book</td>
+             <td style="border: 1px solid black; border-collapse: collapse;">$ 6.3</td>
+             <td style="border: 1px solid black; border-collapse: collapse;"><a href="http://www.panjabdigilib.org/webuser/adopt/AdopterDetails.jsp?adodocid=3465&ID=10741&coll=0">Adopt</a></td>
+  			</tr>
+  			<tr>
+   			 <td style="border: 1px solid black; border-collapse: collapse;"> No Man is an island</td>
+    		 <td style="border: 1px solid black; border-collapse: collapse;">Book</td>
+             <td style="border: 1px solid black; border-collapse: collapse;">$ 36</td>
+             <td style="border: 1px solid black; border-collapse: collapse;"><a href="http://www.panjabdigilib.org/webuser/adopt/AdopterDetails.jsp?adodocid=2431&ID=10009&coll=0">Adopt</a></td>
+  			</tr>
+  			<tr>
+   			 <td style="border: 1px solid black; border-collapse: collapse;"> Fifty Years of Punjab Politics</td>
+    		 <td style="border: 1px solid black; border-collapse: collapse;">Book</td>
+             <td style="border: 1px solid black; border-collapse: collapse;">$ 17</td>
+             <td style="border: 1px solid black; border-collapse: collapse;"><a href="http://www.panjabdigilib.org/webuser/adopt/AdopterDetails.jsp?adodocid=3127&ID=1593&coll=0">Adopt</a></td>
+  			</tr>
+  			<tr>
+   			 <td style="border: 1px solid black; border-collapse: collapse;"> Indian Unrest - 1921</td>
+    		 <td style="border: 1px solid black; border-collapse: collapse;">Book</td>
+             <td style="border: 1px solid black; border-collapse: collapse;">$ 39</td>
+             <td style="border: 1px solid black; border-collapse: collapse;"><a href="http://www.panjabdigilib.org/webuser/adopt/AdopterDetails.jsp?adodocid=9455&ID=2184&coll=0">Adopt</a></td>
+  			</tr>
+  			
+        </table> 
+	    
+	    <tr>
+          <td valign="top" class="bg_white" style="padding: 0 1.5em 0 1.5em;">
+          	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+          		<tr>
+          			<td class="logo" style="text-align: center;">
+			            <div align="center" style="line-height:auto;"><img alt="Alternate text" src="https://drive.google.com/thumbnail?id=1bVi3o-bVypK-o-3YKBwNyS-iV-nsjX0n" style="display: block; align: center; height: auto; border: 0; width: 400px; max-width: 100%;" /></div>
+			            
+			          </td>
+          		</tr>
+          	</table>
+          </td>
+	      </tr><!-- end tr --> 
+	      <tr>
+          <td valign="middle" class="intro bg_white" style=" font-size: 22px;padding: 1em 0 0;">
+            <table>
+            	<tr>
+            		<td>
+            			<div class="bg_white" style="padding: 0 ; text-align: center;">
+            				<h3 style= " font-family: Georgia; color: #d1796a; text-align: centre;">We thank our contributors who extended monetary, in-kind or voluntary support. We appreciate it.</h3>
+            				<p style= " font-family: Georgia; color: #3b4051;"><a href="http://www.panjabdigilib.org/webuser/Donate/getpayerinfo.jsp" class="btn btn-primary ">Donate</a></p>
+						</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+	      </tr><!-- end tr -->
+ 
+	
+	      
+	      <tr>
+          <td valign="middle" class="intro bg_white" style="padding: 0em 0 1.5em;">
+            <table>
+            	<tr>
+            		<td>
+            			<div class="text" style="padding: 0em; font-size: 28px;  text-align: center;">
+            				<h2 style= " font-family: Georgia; color: #d1796a; text-align: centre;">Panjab Digital Library</h2>
+            				<h3 >Plot No.1, sector 28-A <br>Chandigarh (India) - 160027</br></h3>
+            				</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+	      </tr><!-- end tr -->
+    	 
+    	 <tr>
+          <td valign="top" class="bg_white" style="padding: 0;">
+          	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+          		<tr>
+          			<td class="logo" style="text-align: center;">
+			            <div align="center" style="line-height:auto;"><img alt="Alternate text" src="https://drive.google.com/thumbnail?id=1ydHFIfkJtcmnp-Ce0sxnaQf8dcvccT7N" style="display: block; align: center; height:80px;  border: 0; max-width: 100%;" /></div>
+			            
+			          </td>
+          		</tr>
+          	</table>
+          </td>
+	      </tr><!-- end tr --> 
+	      <tr>
+          <td valign="middle" class="intro bg_white" style="padding: 0 ;">
+            <table>
+            	<tr>
+            		<td>
+            			<div class="text" style="font-size: 24px; padding: 0 4.5em;">
+            				<h3 style="text-align: center;">info@panjabdigilib.org</h3>
+            				</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+	      </tr><!-- end tr -->
+ 
+    	 <tr>
+          <td valign="top" class="bg_white" style="padding: 0;">
+          	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+          		<tr>
+          			<td class="logo" style="text-align: center;">
+			            <div align="center" style="line-height:auto;"><img alt="Alternate text" src="https://drive.google.com/thumbnail?id=12eyF1jy-cDzA54EZljah3NO0FZTDz2aT" style="display: block; align: center; height:80px; border: 0; max-width: 100%;" /></div>
+			            
+			          </td>
+          		</tr>
+          	</table>
+          </td>
+	      </tr><!-- end tr --> 
+	      <tr>
+          <td valign="middle" class="intro bg_white" style="padding: 0 1em;">
+            <table>
+            	<tr>
+            		<td>
+            			<div class="text" style=" font-size: 24px; padding: 0 2.5em; text-align: center;">
+            				<h3 style=" padding: 0; line-height: 1.0em; ">+91-98141-13047 (India)</h3>
+            				<h3 style=" padding: 0; line-height: 1.0em; ">+1-604-805-5824 (Canada)</h3>
+            				<h3 style=" padding: 0; line-height: 1.0em; ">+44-7808-117228 (UK)</h3>
+            				<h3 style=" padding: 0; line-height: 1.0em; ">+1-210-704-7096 (USA)</h3>
+            				</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+	      </tr><!-- end tr -->
+	      
+		  <table style="padding: 0 1em;" >
+			<tr>
+				<td style=" padding: 0.5em 0.5em 0.5em 0.5em;"><a href="https://www.facebook.com/PanjabDigiLib.org"><img alt="Alternate text" src="https://drive.google.com/thumbnail?id=1mKWqIkuW_mwdoK6sCs8rX2ze2lIjDC21" style="display: block; align: center; height:72px; border: 0; max-width: 100%;" /></a></td>
+				<td style=" padding: 0.5em 0.5em 0.5em 0.5em;"><a href="https://twitter.com/Panjabdigilib"><img alt="Alternate text" src="https://drive.google.com/thumbnail?id=1FLWxofoB1k-VyqqWbKJupLgZrN5K4zzr" style="display: block; align: center; height:80px; border: 0; max-width: 100%;" /></a></td>
+				<td style=" padding: 0.5em 0.5em 0.5em 0.5em;"><a href="https://www.instagram.com/panjabdigitallibrary/"><img alt="Alternate text" src="https://drive.google.com/thumbnail?id=1ZlMBqvAjSldbskIPam0fIn7kTZgFhRlA" style="display: block; align: center; height:80px; border: 0; max-width: 100%;" /></a></td>
+				<td style=" padding: 0.5em 0.5em 0.5em 0.5em;"><a href="http://www.panjabdigilib.org/webuser/searches/mainpage.jsp"><img alt="Alternate text" src="https://drive.google.com/thumbnail?id=1vIuo0xrNTd0H_ZNw1Jblx0zsfZ8c9wBY" style="display: block; align: center; height:80px; border: 0; max-width: 100%;" /></a></td>
+				<td style=" padding: 0.5em 0.5em 0.5em 0.5em;"><a href="https://www.linkedin.com/company/panjabdigitallibrary"><img alt="Alternate text" src="https://drive.google.com/thumbnail?id=1XPSWhjMJ77rfITwQK0aSJPCXhY35dkzr" style="display: block; align: center; height:80px; border: 0; max-width: 100%;" /></a></td>
+			</tr>
+			
+    	 
+			
+    </div>
+  </center>
+</body>
+</html>
